@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/3dapplier.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>3D Applier — Contest by one-zero-eight</title>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(99825300, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/99825300" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <div class="loading">
+        <p class="figure__text">We are loading</p>
+        <img class="loading__image" src="/images/iphone.svg" alt="iPhone">
+        <p class="bottom-subfont">
+            It's better to use a Chromium-based browser for this page.
+            <br>If you are using Firefox or Safari, please switch to another browser if you face lags.
+        </p>
+    </div>
+
+    <div class="functions functions_separated">
+        <img id="uv" class="functions__function" src="/images/UV.svg">
+        <a id="hint" download href="/images/T_TShirt_HI_8K.png" data-hrefs="/images/T_TShirt_HI_8K.png,/images/T_Hoodie_HI_8K.png,/images/T_Cap_HI_8K.png,/images/T_Pants_HI_8K.png"><img class="functions__function" src="/images/Hints.svg"></a>
+        <a id="bw" download href="/images/T_TShirt_BW_8K.png" data-hrefs="/images/T_TShirt_BW_8K.png,/images/T_Hoodie_BW_8K.png,/images/T_Cap_BW_8K.png,/images/T_Pants_BW_8K.png"><img class="functions__function" src="/images/BW.svg"></a>
+        <img id="question" src="/images/Question.svg" class="functions__function" alt="Question">
+    </div>
+
+    <div class="control-panel">
+        <form class="control-panel__form">
+            <label for="f">
+                <div class="button">Apply</div>
+                <input class="none" id="f" type="file">
+            </label>
+        </form>
+
+        <form class="control-panel__form coordinate-top-right">
+            <label for="j">
+                <div class="button">Change&nbsp;background color</div>
+                <input class="zero-invisible" id="j" type="color">
+            </label>
+        </form>
+
+        <form class="control-panel__form coordinate-bottom-left">
+            <label class="sensetivity-label" for="k">
+                <div class="button">Change sensitivity</div>
+                <input value="10" class="none" min="1" max="100" id="k" type="range">
+            </label>
+        </form>
+
+        <div class="control-panel__window">
+
+        </div>
+        <div class="functions">
+            <a id="model" download href="/models/TShirt.zip" data-hrefs="/models/TShirt.zip,/models/Hoodie.zip,/models/Cap.zip,/models/Pants.zip"><img src="/images/Download.svg" class="functions__function" alt="Download"></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgyEkD_6H5_fu10R4HBVoQYzdbn76PtJAdAgs7mAD50jNoWQ/viewform?usp=sharing" target="_blank" rel="noopener noreferrer"><img src="/images/Send.svg" class="functions__function" alt="Submit"></a>
+        </div>
+    </div>
+
+    <div class="viewers">
+        <div id="viewer0" class="viewer"></div>
+        <div id="viewer1" class="viewer"></div>
+        <div id="viewer2" class="viewer"></div>
+        <div id="viewer3" class="viewer"></div>
+    </div>
+
+    <p class="watermark">3D Applier</p>
+
+    <div class="uv none">
+        <img id="texture" class="uv__image" src="/images/T_TShirt_HI_8K.png" alt="UV">
+        <img id="mask" class="uv__image" src="/images/T_TShirt_BW_8K.png" alt="UV">
+    </div>
+
+    <div class="darken none"></div>
+    <div class="rules none">
+        <h1>What are these buttons?</h1>
+        <p class="rules__item">1. Stripes button — to watch a currently applied texture</p>
+        <p class="rules__item">2. Dash line button — to download the drawing guides for the current model</p>
+        <p class="rules__item">3. BW mask button — to download the mask for the current model</p>
+        <h4><a href="https://youtu.be/uIa5gpjQZ8I" class="text-link">Tutorial</a> on YouTube</h4>
+        <div class="iframe-center">
+            <iframe class="iframe-center__iframe" width="560" height="315" src="https://www.youtube.com/embed/uIa5gpjQZ8I?si=MZ5Ch7_myjS2HubJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h2>How to draw?</h2>
+        <p class="rules__item">1. Choose a model from the third slide, click on them to switch (or do it here, there is also a "download&nbsp;the&nbsp;model" button near the submition button)</p>
+        <img class="rules__image" src="/images/Tutorial1.png" alt="Tutorial 1" data-revolution="/images/Tutorial1Revolution.png">
+        <p class="rules__item">2. Download the image hint, or the mask image, or all together</p>
+        <img class="rules__image" src="/images/Tutorial2.png" alt="Tutorial 2" data-revolution="/images/Tutorial2Revolution.png">
+        <p class="rules__item">3. In your favourite soft, create a texture and distribute it according guides</p>
+        <div class="carousel">
+            <div id="left" class="carousel__handle">
+                <p class="carousel__handle__font">&#60;</p>
+            </div>
+            <img class="carousel__higher" src="/images/Step1.png" alt="Inheritor" data-revolution="/images/Step1Revolution.png">
+            <div id="right" class="carousel__handle">
+                <p class="carousel__handle__font">></p>
+            </div>
+            <img class="carousel__image" src="/images/Step1.png" alt="Step 1" data-revolution="/images/Step1Revolution.png">
+            <img class="carousel__image invisible" src="/images/Step2.png" alt="Step 2" data-revolution="/images/Step2Revolution.png">
+            <img class="carousel__image invisible" src="/images/Step3.png" alt="Step 3" data-revolution="/images/Step3Revolution.png">
+            <img class="carousel__image invisible" src="/images/Step4.png" alt="Step 4" data-revolution="/images/Step4Revolution.png">
+        </div>
+        <p class="rules__item">4. Test your textures in 3D&nbsp;Applier by choosing them in the Apply button's popup window</p>
+        <p class="rules__item">5. Submit <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgyEkD_6H5_fu10R4HBVoQYzdbn76PtJAdAgs7mAD50jNoWQ/viewform?usp=sharing" class="text-link">the&nbsp;form</a> with your artwork</p>
+        <h3>Hints</h3>
+        <p class="rules__item">The color of inner sides of models can be changed by filling the background of textures, black space on masks</p>
+        <p class="rules__item">Use left click or single touch, hold, and move to revolute models</p>
+        <p class="rules__item">Use wheel or double touch and move to fly closer to models or further away from them</p>
+        <p class="rules__item">To change the background color, you need to define it and click the button one more time</p>
+        <p class="rules__item">This and other popup windows can be closed by clicking them or by clicking outside them</p>
+    </div>
+
+    <script type="module" src="js/check_webgl.js"></script>
+    <script type="module" src="js/3dapplier.js"></script>
+</body>
+
+</html>

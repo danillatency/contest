@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --bg: rgb(22, 22, 26);
+    --bc: rgb(13, 13, 15);
+    --gap: 1dvh;
+}
+
+body {
+    background-color: var(--bc);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.sou {
+    width: max(5dvh, 20px);
+    position: absolute;
+    left: var(--gap);
+    bottom: var(--gap);
+    user-select: none;
+}
+
+.administrator-hints {
+    font: 500 max(2dvh, 12px)/max(3dvh, 16px) "Roboto";
+    color: white;
+    position: fixed;
+    right: var(--gap);
+    bottom: var(--gap);
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.characteristics {
+    font: 500 max(2dvh, 12px)/max(3dvh, 16px) "Roboto";
+    color: white;
+    position: fixed;
+    right: var(--gap);
+    bottom: var(--gap);
+    user-select: none;
+    pointer-events: none;
+}
+
+h1 {
+    font: 900 max(5dvh, 20px)/max(5dvh, 25px) "Roboto";
+    color: white;
+    position: fixed;
+    left: var(--gap);
+    top: var(--gap);
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+h2 {
+    font: 900 max(5dvh, 20px)/max(5dvh, 25px) "Roboto";
+    color: white;
+    position: fixed;
+    left: var(--gap);
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.6;
+    top: calc(var(--gap) * 2 + max(5dvh, 25px))
+}
+
+.field {
+    aspect-ratio: calc(16 / 9);
+}
+
+.frame {
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+
+.background__image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.innocent {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    animation: slowrot 4s ease-in-out infinite alternate;
+}
+
+@keyframes slowrot {
+    from {
+        transform: rotateZ(-45deg);
+    }
+
+    to {
+        transform: rotateZ(45deg);
+    }
+}
+
+.bar {
+    width: 25dvw;
+    height: 2dvh;
+    background: linear-gradient(90deg, rgb(92, 168, 92) 100%, transparent 0%);
+    border-radius: 100px;
+    position: absolute;
+    border-style: solid;
+    border-width: 4px;
+    color: white;
+    right: calc(2dvw + 25dvw + 2dvw); 
+    top: 1dvh;
+    z-index: 100;
+}
+
+.bar + .bar {
+    background: linear-gradient(90deg, rgb(255, 255, 255) 100%, transparent 0%);
+    right: 2dvw;
+}
+
+.bar .characteristics {
+    position: absolute;
+    left: 0;
+    top: calc(1dvh + 2dvh);
+}
+
+.big-circle {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    border-radius: 200dvh;
+    background-color: black;
+    transform: scale(0) rotateZ(-0deg);
+    pointer-events: none;
+    user-select: none;
+}
+
+.small-circle {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    opacity: 0.5;
+    right: 0;
+    top: 50px;
+    border-radius: 200dvh;
+    background-color: white;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (aspect-ratio >= 16 / 9) {
+    .field {
+        height: 100%;
+    }
+}
+
+@media (aspect-ratio < 16 / 9) {
+    .field {
+        width: 100%;
+    }
+}
+
+/* modifiers */
+.display {
+    display: unset;
+}
+
