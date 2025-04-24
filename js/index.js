@@ -237,7 +237,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
 
 let currentModelIdentifier = 1
 let identifiers = [0, 1, 2, 3, 4]
-const models = ["/models/TShirt.glb", "/models/Hoodie.glb", "/models/Cap.glb", "/models/Pants.glb", "/models/Lantern.glb"]
+const models = ["models/TShirt.glb", "models/Hoodie.glb", "models/Cap.glb", "models/Pants.glb", "models/Lantern.glb"]
 const scenes = []
 const cameras = []
 const renderers = []
