@@ -9,25 +9,25 @@ class SheightAnimation {
         this.attack = []
         for (let i = 0; i < 16; i++) {
             this.idle.push(document.createElement("img"))
-            this.idle[i].setAttribute("src", `/assets/frames/idle/${`${i + 1}`.padStart(4, '0')}.png`)
+            this.idle[i].setAttribute("src", `/prefabs/frames/idle/${`${i + 1}`.padStart(4, '0')}.png`)
             this.idle[i].classList.add("frame")
             document.querySelector(".field").appendChild(this.idle[i])
         }
         for (let i = 0; i < 10; i++) {
             this.cone.push(document.createElement("img"))
-            this.cone[i].setAttribute("src", `/assets/frames/cone/${`${i + 1}`.padStart(4, '0')}.png`)
+            this.cone[i].setAttribute("src", `/prefabs/frames/cone/${`${i + 1}`.padStart(4, '0')}.png`)
             this.cone[i].classList.add("frame")
             document.querySelector(".field").appendChild(this.cone[i])
         }
         for (let i = 0; i < 16; i++) {
             this.movement.push(document.createElement("img"))
-            this.movement[i].setAttribute("src", `/assets/frames/movement/${`${i + 1}`.padStart(4, '0')}.png`)
+            this.movement[i].setAttribute("src", `/prefabs/frames/movement/${`${i + 1}`.padStart(4, '0')}.png`)
             this.movement[i].classList.add("frame")
             document.querySelector(".field").appendChild(this.movement[i])
         }
         for (let i = 0; i < 19; i++) {
             this.attack.push(document.createElement("img"))
-            this.attack[i].setAttribute("src", `/assets/frames/attack/${`${i + 1}`.padStart(4, '0')}.png`)
+            this.attack[i].setAttribute("src", `/prefabs/frames/attack/${`${i + 1}`.padStart(4, '0')}.png`)
             this.attack[i].classList.add("frame")
             document.querySelector(".field").appendChild(this.attack[i])
         }
@@ -143,7 +143,7 @@ class Innocent {
         this.domElement.style.setProperty("left", `${this.x}px`)
         this.domElement.style.setProperty("top", `${this.y}px`)
         this.domElement.style.setProperty("animation-delay", `${Math.random() * 4000}ms`)
-        this.domElement.setAttribute("src", `/assets/innocents/${["svelte", "fastapi", "react", "rubyonrails", "django", "angular"][Math.floor(Math.random() * 6)]}.svg`)
+        this.domElement.setAttribute("src", `/prefabs/innocents/${["svelte", "fastapi", "react", "rubyonrails", "django", "angular"][Math.floor(Math.random() * 6)]}.svg`)
         document.querySelector(".background").appendChild(this.domElement)
         this.calculateOrigin()
     }
@@ -160,7 +160,7 @@ class Innocent {
             this.calculateOrigin()
             this.domElement.style.setProperty("left", `${this.x}px`)
             this.domElement.style.setProperty("top", `${this.y}px`)
-            this.domElement.setAttribute("src", `/assets/innocents/${["svelte", "fastapi", "react", "rubyonrails", "django", "angular"][Math.floor(Math.random() * 6)]}.svg`)
+            this.domElement.setAttribute("src", `/prefabs/innocents/${["svelte", "fastapi", "react", "rubyonrails", "django", "angular"][Math.floor(Math.random() * 6)]}.svg`)
         }, this.deltaTime * 8)
     }
 
