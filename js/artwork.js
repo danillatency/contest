@@ -147,10 +147,10 @@ function createView(blobResponse, id) {
     let forModel = sheetResponseBounded[1][0]
 
     loader.load({
-        "T-Shirt": "/models/TShirt.glb",
-        "Cap": "/models/Cap.glb",
-        "Pants": "/models/Pants.glb",
-        "Hoodie": "/models/Hoodie.glb"
+        "T-Shirt": "models/TShirt.glb",
+        "Cap": "models/Cap.glb",
+        "Pants": "models/Pants.glb",
+        "Hoodie": "models/Hoodie.glb"
     }[forModel], function (gltf) {
         scene.add(gltf.scene)
         const loadMeshTextureAndNormals = () => new Promise((resolve, reject) => {
@@ -158,10 +158,10 @@ function createView(blobResponse, id) {
             const textureAndNormals = [
                 (new THREE.TextureLoader(manager)).load(URL.createObjectURL(blobResponse)),
                 (new THREE.TextureLoader(manager)).load({
-                    "T-Shirt": "/images/T_TShirt_NL_8K.png",
-                    "Cap": "/images/T_Cap_NL_8K.png",
-                    "Pants": "/images/T_Pants_NL_8K.png",
-                    "Hoodie": "/images/T_Hoodie_NL_8K.png",
+                    "T-Shirt": "images/T_TShirt_NL_8K.png",
+                    "Cap": "images/T_Cap_NL_8K.png",
+                    "Pants": "images/T_Pants_NL_8K.png",
+                    "Hoodie": "images/T_Hoodie_NL_8K.png",
                 }[forModel]),
             ]
         })

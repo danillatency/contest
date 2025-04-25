@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
 
 let currentModelIdentifier = 0
 let identifiers = [0, 1, 2, 3]
-const models = ["/models/TShirt.glb", "/models/Hoodie.glb", "/models/Cap.glb", "/models/Pants.glb"]
+const models = ["models/TShirt.glb", "models/Hoodie.glb", "models/Cap.glb", "models/Pants.glb"]
 const scenes = []
 const cameras = []
 const renderers = []
@@ -17,7 +17,7 @@ for (let i of identifiers) {
     lights.push(new THREE.HemisphereLight(0xffffff, 0x717173, 3))
 }
 
-const minimodels = ["/models/TShirt.glb", "/models/Hoodie.glb", "/models/Cap.glb", "/models/Pants.glb"]
+const minimodels = ["models/TShirt.glb", "models/Hoodie.glb", "models/Cap.glb", "models/Pants.glb"]
 const miniscenes = []
 const minicameras = []
 const minirenderers = []
@@ -40,7 +40,7 @@ let times = 8
 for (let i of identifiers) {
     loaders[i].load(models[i], function (gltf) {
         scenes[i].add(gltf.scene)
-        let texture = (new THREE.TextureLoader()).load("/images/White.png")
+        let texture = (new THREE.TextureLoader()).load("images/White.png")
         texture.flipY = false
         let normals = (new THREE.TextureLoader()).load(models[i].replace("models/", "images/T_").replace(".glb", "_NL_8K.png"))
         normals.flipY = false
@@ -216,7 +216,7 @@ document.querySelectorAll("form")[2].addEventListener("change", (event) => {
     sensetivity = document.querySelector("#k").value / 1000
 })
 
-let masks = ["/images/T_TShirt_BW_8K.png", "/images/T_Hoodie_BW_8K.png", "/images/T_Cap_BW_8K.png", "/images/T_Pants_BW_8K.png"]
+let masks = ["images/T_TShirt_BW_8K.png", "images/T_Hoodie_BW_8K.png", "images/T_Cap_BW_8K.png", "images/T_Pants_BW_8K.png"]
 // buttons
 document.querySelector("#uv").addEventListener("click", () => {
     let foundModel
