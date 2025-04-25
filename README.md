@@ -27,3 +27,7 @@ https://github.com/user-attachments/assets/a1a6734b-2d87-43ff-8a7a-73ca36f45a57
 3. In the rootdir terminal, run
 `npm install --save three` & `npm install --save-dev vite`
 4. Run `npx vite` to start the website on your machine
+
+## Deployment
+1. Use GitHub actions and Vite configuration files from this repository 
+2. Change hrefs of gallery.js and artwork.js
