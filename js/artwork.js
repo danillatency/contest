@@ -249,10 +249,10 @@ function addEventListeners() {
 }
 
 document.querySelector("#forward").addEventListener("click", () => {
-    window.location.href = `https://contest.innohassle.ru/artwork.html?id=${filesResponseBounded[2]["id"]}`
+    window.location.href = `https://thisisfabrics.github.io/contest/artwork.html?id=${filesResponseBounded[2]["id"]}`
 })
 document.querySelector("#backward").addEventListener("click", () => {
-    window.location.href = `https://contest.innohassle.ru/artwork.html?id=${filesResponseBounded[0]["id"]}`
+    window.location.href = `https://thisisfabrics.github.io/contest/artwork.html?id=${filesResponseBounded[0]["id"]}`
 })
 
 let loadingOpacity = 1

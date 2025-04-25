@@ -176,7 +176,7 @@ async function createPreviews() {
                 document.querySelectorAll(".grid__placeholder-item")[i].appendChild(copiedCanvas)
                 document.querySelectorAll(".grid__placeholder-item")[i].style = "background: unset; aspect-ratio: unset;"
                 document.querySelectorAll(".grid__placeholder-item")[i].addEventListener("click", () => {
-                    window.location.href = `https://contest.innohassle.ru/artwork.html?id=${filesResponseBounded[i]["id"]}`
+                    window.location.href = `https://thisisfabrics.github.io/contest/artwork.html?id=${filesResponseBounded[i]["id"]}`
                 })
                 createPreviews()
             })
