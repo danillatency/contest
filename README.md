@@ -15,9 +15,9 @@ https://github.com/user-attachments/assets/b6baf71b-1b8f-4806-82e8-5d4f1c2c4f39
 - CSS
 - JavaScript
 - [Three.js](https://threejs.org/)
-- [Google Drive API](https://developers.google.com/drive/api/guides/about-sdk) `For contestant's attached to forms files retrieval`
-- [Google Sheets API](https://developers.google.com/workspace/sheets/api/guides/concepts) `For contestant's works retrieval`
-- Google Forms `Contestants' works are collected with Google Forms`
+- [Google Drive API](https://developers.google.com/drive/api/guides/about-sdk) `for contestant's attached to forms files retrieval`
+- [Google Sheets API](https://developers.google.com/workspace/sheets/api/guides/concepts) `for contestant's works retrieval`
+- Google Forms `contestants' works are collected with Google Forms`
 - [Node.js](https://nodejs.org/en)  `for dependencies installation`
 - [Vite](https://vite.dev/) `for project building`
 
