@@ -1,5 +1,6 @@
 # 3D textures design competition by one-zero-eight
 
+This is a project for a creative contest coducted by one-zero-eight. It is a student community of Innopolis University that developes inner ecosystem of services for Innopolis university and Innopolis city, as well as prepares different activities for students.
 https://thisisfabrics.github.io/contest
 
 ## [Try 3D Applier](https://thisisfabrics.github.io/contest/3dapplier.html)
