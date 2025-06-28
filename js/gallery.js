@@ -5,7 +5,7 @@ let sheetResponseBounded = []
 let filesResponseBounded = []
 let filesResponseBoundedIterator
 
-let apiKey = "AIzaSyAaK_K5ZedO5Gez6qd45s--Djk8XyqeBBw"
+let apiKey = "AIzaSyDHJe4P3DD9VDtplKbzXXq345bSGyFHpcU"
 
 async function someBrowsersDoNotSupportGlobalAwaits() {
     let responseAwaits = 1
@@ -14,7 +14,7 @@ async function someBrowsersDoNotSupportGlobalAwaits() {
     let sheetResponse
 
     while (true) {
-        filesResponse = await fetch(`https://www.googleapis.com/drive/v3/files?q='1XnpYhqCU8oXx0CC6t5drUXf1vTuBWd89'+in+parents&key=${apiKey}`)
+        filesResponse = await fetch(`https://www.googleapis.com/drive/v3/files?q='1J2cPJKVJiczpUiwvfbd_wqVQ1gpMulCG'+in+parents&key=${apiKey}`)
         if (filesResponse["status"] == 200) {
             filesResponse = await filesResponse.json()
             break
@@ -29,7 +29,7 @@ async function someBrowsersDoNotSupportGlobalAwaits() {
     responseAwaits = 1
 
     while (true) {
-        sheetResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1jwUkf-3rJOq5YfDgJVBH6LxURf6eGridgJb_oOIipr4/values/Sheet1?key=${apiKey}`)
+        sheetResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1PDwomK9ZaKUKZj8Sc2xQDNACYcL5e3WI/values/Sheet1?key=${apiKey}`)
         if (sheetResponse["status"] == 200) {
             sheetResponse = await sheetResponse.json()
             break
