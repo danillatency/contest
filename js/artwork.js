@@ -28,7 +28,7 @@ async function someBrowsersDoNotSupportGlobalAwaits() {
     responseAwaits = 1
 
     while (true) {
-        sheetResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1PDwomK9ZaKUKZj8Sc2xQDNACYcL5e3WI/values/Sheet1?key=${apiKey}`)
+        sheetResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1TfHeTXRBryiTThVveuC3AG1_y9jKt5NVAUebeQMfpHM/values/Sheet1?key=${apiKey}`)
         if (sheetResponse["status"] == 200) {
             sheetResponse = await sheetResponse.json()
             break
